@@ -31,10 +31,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
         // create a query
         Query<Employee> query = session.createQuery("from Employee", Employee.class);
 
-        // execute and get result list
-        List<Employee> employees = query.getResultList();
-
-        // return results
-        return employees;
+        // execute, get result list and return it
+        return query.getResultList();
     }
 }
